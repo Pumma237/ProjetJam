@@ -50,7 +50,7 @@ y = y + vsp;
 //Animation
 if (!place_meeting(x,y+1,oWall))
 {
-	sprite_index = sPlayer;
+	sprite_index = sPlayerA;
 	//if (sign(vsp) > 0) image_index = 1 ; else image_index = 0;
 }
 else
