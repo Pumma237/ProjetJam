@@ -4,7 +4,7 @@
 
 // Hearth
 
-if (playerHealth >= playerMaxHealth)
+if (global.playerHealth >= global.playerMaxHealth)
 {
-	playerHealth = playerMaxHealth;
+	global.playerHealth = global.playerMaxHealth;
 }
