@@ -16,6 +16,10 @@ hsp = move * walksp;
 
 if	(place_meeting(x + hsp, y , oWall))
 	{
-		hsp = 0;
+		while(!place_meeting(x+sign(hsp),y,oWall))
+		{
+			
+		}
 	}
+	hsp = 0;
 x = x + hsp;
