@@ -79,6 +79,14 @@
             }
         },
         {
+            "Key": "4616d1fd-b092-4c72-a0f5-01c0308a126b",
+            "Value": {
+                "id": "44aabd13-5674-4622-8dc9-a01d55a7dac1",
+                "resourcePath": "sprites\\sPlayerD\\sPlayerD.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4a033a85-a49c-4adc-953c-2f9ff67e4ffb",
             "Value": {
                 "id": "d9dba7ad-f9e8-4e87-8ddf-9d06a2ebad1f",
@@ -95,18 +103,10 @@
             }
         },
         {
-            "Key": "5876126c-38ea-46b2-976b-ec3aacdd12ed",
-            "Value": {
-                "id": "b391bcb6-fe5f-493c-84ec-bdb4caa08ab4",
-                "resourcePath": "sprites\\sGUI\\sGUI.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "77d20310-190d-4aa4-8a1b-ff45c1694b65",
             "Value": {
                 "id": "d2a56cb1-0dfd-4c4b-bb86-d1ea240ef6f0",
-                "resourcePath": "sprites\\sPlayerR\\sPlayerR.yy",
+                "resourcePath": "sprites\\sPlayer\\sPlayer.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -140,6 +140,14 @@
                 "id": "3a7810aa-8fe9-4b15-b162-b13ebc8cc11c",
                 "resourcePath": "views\\8c545c41-8fdb-418d-9848-99f141b72ebf.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "91bee76d-0447-4086-9636-7b719115a586",
+            "Value": {
+                "id": "1eab4a62-2b6d-467a-8dbf-be1b7053c42b",
+                "resourcePath": "sprites\\sPlayerD2\\sPlayerD2.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -239,27 +247,11 @@
             }
         },
         {
-            "Key": "d71e2b26-f690-420e-a1ae-3c5b954f1ba2",
-            "Value": {
-                "id": "1c7061f6-8b8f-4dba-aa03-e8d8a1acc594",
-                "resourcePath": "sprites\\sprite2\\sprite2.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "e3949917-f26a-47fa-8af2-34371e537103",
             "Value": {
                 "id": "d892b0cd-849e-4677-82cf-ee728a00c09f",
                 "resourcePath": "views\\e3949917-f26a-47fa-8af2-34371e537103.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "e9222ffe-c634-482b-ab1f-c325f982fe42",
-            "Value": {
-                "id": "6bbdcd74-f99e-4954-8ecb-9714c18ed6ef",
-                "resourcePath": "sprites\\sPlayerL\\sPlayerL.yy",
-                "resourceType": "GMSprite"
             }
         },
         {

@@ -17,7 +17,6 @@ vsp = vsp + grv;
 if (place_meeting(x,y+1,oWall)) && (key_jump)
 {
 	vsp = -7;	
-	global.playerHealth -= 1;
 }
 
 
@@ -48,3 +47,36 @@ y = y + vsp;
 
 
 
+//Animation
+if (!place_meeting(x,y+1,oWall))
+{
+	sprite_index = sPlayer;
+	//if (sign(vsp) > 0) image_index = 1 ; else image_index = 0;
+}
+else
+{
+
+	//image_speed = 1;
+	if (hsp == 0)
+	{
+		sprite_index = sPlayer;
+	}
+	else
+	{
+
+		if (hsp > 0 && mouse_x > oPlayer.x) sprite_index = sPlayerD; 
+		if (hsp < 0 && mouse_x > oPlayer.x ) sprite_index = sPlayerD2;
+		if (hsp > 0 && mouse_x < oPlayer.x ) sprite_index = sPlayerD2;
+		if (hsp < 0 && mouse_x < oPlayer.x ) sprite_index = sPlayerD ;
+    }
+}
+
+
+if (mouse_x > oPlayer.x) 
+{ 
+	image_xscale = 1; 
+}
+else
+{
+	image_xscale = -1;
+}
