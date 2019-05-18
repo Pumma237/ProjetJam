@@ -1,0 +1,2 @@
+/// @description Initiation 
+state = "chase";
