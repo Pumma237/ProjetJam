@@ -4,79 +4,90 @@
 key_left  = keyboard_check(vk_left)|| keyboard_check(ord("Q"));
 key_right = keyboard_check(vk_right) || keyboard_check(ord("D"));
 key_jump  = keyboard_check_pressed(vk_space) || keyboard_check(ord("Z"));
-
+key_dow   = keyboard_check(vk_down) || keyboard_check(ord("S"));
+key_one   = keyboard_check(vk_numpad1);
 
 // Calcule des mouvements
 var move = key_right - key_left;
-
 hsp = move * walksp;
 
 vsp = vsp + grv;
 
-// Saut
-if (place_meeting(x,y+1,oWall64) || place_meeting(x,y+1,oWall16) || place_meeting(x,y+1,oWall8)) && (key_jump)
-{
-	vsp = -12;	
-}
+if (key_one) global.isPlayer = false;
 
 
-// Collision Horizontal
-if	(place_meeting(x+hsp,y, oWall64) || place_meeting(x+hsp,y, oWall16) || place_meeting(x+hsp,y, oWall8))
+
+if (global.isPlayer)
 {
-	while(!place_meeting(x+sign(hsp),y,oWall64) || !place_meeting(x+sign(hsp),y,oWall16) || !place_meeting(x+sign(hsp),y,oWall8))
+
+	// Saut
+	if (place_meeting(x,y+1,oWall64) || place_meeting(x,y+1,oWall16) || place_meeting(x,y+1,oWall8)) && (key_jump)
 	{
-			x = x + sign(hsp);
+		vsp = -12;	
+	}
+
+
+	// Collision Horizontal
+	if	(place_meeting(x+hsp,y, oWall64) || place_meeting(x+hsp,y, oWall16) || place_meeting(x+hsp,y, oWall8))
+	{
+		while(!place_meeting(x+sign(hsp),y,oWall64) && !place_meeting(x+sign(hsp),y,oWall16) && !place_meeting(x+sign(hsp),y,oWall8))
+		{
+				x = x + sign(hsp);
 			
+		}
+		hsp = 0;
 	}
-	hsp = 0;
-}
 	
-x = x + hsp;
+	x = x + hsp;
 
-// Vertical collision
-if	(place_meeting(x, y+vsp , oWall64)|| place_meeting(x, y+vsp , oWall16) || place_meeting(x, y+vsp , oWall8))
-{
-	while(!place_meeting(x,y+sign(vsp),oWall64) || !place_meeting(x,y+sign(vsp),oWall16) || !place_meeting(x,y+sign(vsp),oWall8))
+	// Vertical collision
+	if	(place_meeting(x, y+vsp , oWall64)|| place_meeting(x, y+vsp , oWall16) || place_meeting(x, y+vsp , oWall8))
 	{
-			y = y + sign(vsp);
+		while(!place_meeting(x,y+sign(vsp),oWall64) && !place_meeting(x,y+sign(vsp),oWall16) && !place_meeting(x,y+sign(vsp),oWall8))
+		{
+				y = y + sign(vsp);
+		}
+		vsp = 0;
 	}
-	vsp = 0;
-}
 	
-y = y + vsp;
+	y = y + vsp;
 
 
 
-//Animation
-if (!place_meeting(x,y+1,oWall64) || !place_meeting(x,y+1,oWall8) || !place_meeting(x,y+1,oWall16))
-{
-	sprite_index = sPlayerA;
-	//if (sign(vsp) > 0) image_index = 1 ; else image_index = 0;
-}
-else
-{
-
-	//image_speed = 1;
-	if (hsp == 0)
+	//Animation
+	if (!place_meeting(x,y+1,oWall64) && !place_meeting(x,y+1,oWall8) && !place_meeting(x,y+1,oWall16))
 	{
-		sprite_index = sPlayer;
+		sprite_index = sPlayerA;
+		//if (sign(vsp) > 0) image_index = 1 ; else image_index = 0;
 	}
 	else
 	{
 
-		if (hsp > 0 && mouse_x > oPlayer.x) sprite_index = sPlayerD; 
-		if (hsp < 0 && mouse_x > oPlayer.x ) sprite_index = sPlayerD2;
-		if (hsp > 0 && mouse_x < oPlayer.x ) sprite_index = sPlayerD2;
-		if (hsp < 0 && mouse_x < oPlayer.x ) sprite_index = sPlayerD ;
-    }
-}
+		//image_speed = 1;
+		if (hsp == 0)
+		{
+			sprite_index = sPlayer;
+		}
+		else
+		{
+
+			if (hsp > 0 && mouse_x > oPlayer.x) sprite_index = sPlayerD; 
+			if (hsp < 0 && mouse_x > oPlayer.x ) sprite_index = sPlayerD2;
+			if (hsp > 0 && mouse_x < oPlayer.x ) sprite_index = sPlayerD2;
+			if (hsp < 0 && mouse_x < oPlayer.x ) sprite_index = sPlayerD ;
+	    }
+	}
 
 
-if (mouse_x > oPlayer.x) 
-{ 
-	image_xscale = 1; 
-}
-else
+	if (mouse_x > oPlayer.x) 
+	{ 
+		image_xscale = 1; 
+	}
+	else
+	{
+		image_xscale = -1;
+	}
+}else
 {
-	image_xscale = -1;
+	event_user(0)
 }

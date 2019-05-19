@@ -1,4 +1,5 @@
 /// @description Initialisation de code 
+if (global.isPlayer)
 state = e_state.idle;
 hsp = 0;
 vsp = 0;
