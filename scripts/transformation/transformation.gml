@@ -1,17 +1,17 @@
 ///@arg sprite
-///@arg objet
 ///@arg pv
 ///@arg def
 ///@arg speed
+var monster;
+monster[0] = argument0;
 
-var sprite = argument0;
+monster[1] = argument1;
 
-var objet = argument1;
+monster[2] = argument2;
 
-var pv = argument2;
+monster[3]= argument3;
 
-var def = argument3;
 
-var speed = argument4
+return monster;
 
 ;
