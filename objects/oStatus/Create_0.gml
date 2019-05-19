@@ -2,4 +2,4 @@
 
 global.playerMaxHealth = 100;
 global.playerHealth = global.playerMaxHealth;
-global.isPlayer = false;
+global.isPlayer = true;

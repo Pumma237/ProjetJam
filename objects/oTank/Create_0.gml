@@ -1,2 +1,5 @@
-/// @description Initiation 
-state = "chase";
+hsp = 0;
+vsp = 0;
+grv = 0.5;
+walksp = 3;
+state = e_state.chase;
