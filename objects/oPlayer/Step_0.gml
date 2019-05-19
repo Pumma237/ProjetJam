@@ -6,19 +6,34 @@ key_right = keyboard_check(vk_right) || keyboard_check(ord("D"));
 key_jump  = keyboard_check_pressed(vk_space) || keyboard_check(ord("Z"));
 key_dow   = keyboard_check(vk_down) || keyboard_check(ord("S"));
 key_one   = keyboard_check(vk_numpad1);
+key_two   = keyboard_check(vk_numpad2);
 
 // Calcule des mouvements
 var move = key_right - key_left;
 hsp = move * walksp;
 
 vsp = vsp + grv;
+cooldown2 -=1;
 cooldown -= 1;
 if (key_one && cooldown < 1)
 {
 	global.isPlayer = false;
-	oPlayer.mask_index = sBat;
+	oPlayer.mask_index = slot1[0];
+	form = slot1[0];
+	walksp = slot1[4];
 	instance_create_layer(x,y,"Bullets",oSmoke)
 	cooldown = room_speed * 10;
+	alarm[0] = room_speed * 5;
+}
+
+if (key_two && cooldown2 < 1)
+{
+	global.isPlayer = false;
+	oPlayer.mask_index = slot2[0];
+	form = slot1[0];
+	walksp = slot1[4];
+	instance_create_layer(x,y,"Bullets",oSmoke)
+	cooldown2 = room_speed * 10;
 	alarm[0] = room_speed * 5;
 }
 
