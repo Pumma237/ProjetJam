@@ -16,7 +16,8 @@ key_dow   = keyboard_check(vk_down) || keyboard_check(ord("S"));
 	hsp = move * walksp;
 
 
-
+		  x = x + hsp;
+		  y = y + vsp;
 
 	if (mouse_x > self.x)  
 	{ 
