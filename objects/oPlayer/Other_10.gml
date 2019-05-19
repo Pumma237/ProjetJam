@@ -4,7 +4,7 @@
 // Calcule des mouvements
 
 set_state_sprite(sBat,0.4);
-
+image_angle = point_direction(x,y,mouse_x,mouse_y);
 	var move = key_right - key_left;
 
 	var fly = key_dow - key_jump  ;
