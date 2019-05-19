@@ -1,5 +1,6 @@
 /// @description Insérez la description ici
-
+if  instance_exists(oPlayer)
+{
 x = oPlayer.x;
 y = oPlayer.y -150;
 
@@ -16,4 +17,5 @@ if (mouse_check_button(mb_left)) && (firingdelay < 0)
 		direction = other.image_angle;
 		image_angle = direction;
 	}
+}
 }

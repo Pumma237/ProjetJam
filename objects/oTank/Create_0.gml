@@ -1,2 +1,2 @@
 /// @description Initiation 
-state = e_state.chase;
+state = "chase";
