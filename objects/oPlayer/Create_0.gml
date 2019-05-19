@@ -2,8 +2,10 @@
 
 hsp = 0;
 vsp = 0;
-grv = 0.3;
+grv = 0.5;
 walksp = 7;
 
 
-instance_create_layer(x,y,"Player",oBall)
+instance_create_layer(x,y,"Player",oBall);
+
+cooldown = 0;

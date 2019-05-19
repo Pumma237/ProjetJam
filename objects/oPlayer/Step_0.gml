@@ -12,10 +12,16 @@ var move = key_right - key_left;
 hsp = move * walksp;
 
 vsp = vsp + grv;
+cooldown -= 1;
+if (key_one && cooldown < 1) 
+{
+	global.isPlayer = false;
+	instance_create_layer(x,y,"Smoke",oSmoke);
+	alarm[0] = 5*room_speed;
+	cooldown = room_speed * 10;
+}
 
-if (key_one) global.isPlayer = false;
-
-
+	
 
 if (global.isPlayer)
 {
@@ -23,9 +29,20 @@ if (global.isPlayer)
 	// Saut
 	if (place_meeting(x,y+1,oWall64) || place_meeting(x,y+1,oWall16) || place_meeting(x,y+1,oWall8)) && (key_jump)
 	{
-		vsp = -12;	
+		vsp = -18;	
 	}
 
+
+
+	// Vertical collision
+	if	(place_meeting(x, y+vsp , oWall64)|| place_meeting(x, y+vsp , oWall16) || place_meeting(x, y+vsp , oWall8))
+	{
+		while(!place_meeting(x,y+sign(vsp),oWall64) && !place_meeting(x,y+sign(vsp),oWall16) && !place_meeting(x,y+sign(vsp),oWall8))
+		{
+				y = y + sign(vsp);
+		}
+		vsp = 0;
+	}
 
 	// Collision Horizontal
 	if	(place_meeting(x+hsp,y, oWall64) || place_meeting(x+hsp,y, oWall16) || place_meeting(x+hsp,y, oWall8))
@@ -37,18 +54,11 @@ if (global.isPlayer)
 		}
 		hsp = 0;
 	}
-	
+
+
 	x = x + hsp;
 
-	// Vertical collision
-	if	(place_meeting(x, y+vsp , oWall64)|| place_meeting(x, y+vsp , oWall16) || place_meeting(x, y+vsp , oWall8))
-	{
-		while(!place_meeting(x,y+sign(vsp),oWall64) && !place_meeting(x,y+sign(vsp),oWall16) && !place_meeting(x,y+sign(vsp),oWall8))
-		{
-				y = y + sign(vsp);
-		}
-		vsp = 0;
-	}
+
 	
 	y = y + vsp;
 
@@ -89,5 +99,7 @@ if (global.isPlayer)
 	}
 }else
 {
-	event_user(0)
+	event_user(0);
+	instance_destroy(oBall);
+
 }
