@@ -79,6 +79,14 @@
             }
         },
         {
+            "Key": "1dc5291a-e86f-4bfc-8b43-50c53f48e929",
+            "Value": {
+                "id": "db6287bf-b545-4c96-89a2-c4092573f08a",
+                "resourcePath": "views\\1dc5291a-e86f-4bfc-8b43-50c53f48e929.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "21a9aa78-3dda-4ce4-b7d3-515bf7bc6b70",
             "Value": {
                 "id": "8b809700-1e89-41f5-be26-cf86e135d499",
@@ -391,6 +399,14 @@
             }
         },
         {
+            "Key": "b498ee5a-e81e-4c95-a271-19f30f1a24bf",
+            "Value": {
+                "id": "e9d0dd1a-60f3-465d-ae2b-b9a27f0bc0e5",
+                "resourcePath": "scripts\\transformation\\transformation.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b54139eb-0f88-4d23-85d0-0acc3f52eeed",
             "Value": {
                 "id": "ace324e8-49f3-4262-8c2a-8f505676a79e",
@@ -435,6 +451,14 @@
             "Value": {
                 "id": "2949f63a-b402-4ca6-ad12-655619f8d21e",
                 "resourcePath": "sprites\\S_Ground\\S_Ground.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "bcd50718-7919-45c3-b645-73a781b9453d",
+            "Value": {
+                "id": "8fc591fc-898b-4959-8f34-590fe2adb92f",
+                "resourcePath": "sprites\\sSmoke\\sSmoke.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -527,6 +551,14 @@
             }
         },
         {
+            "Key": "e55349e9-3ae8-43c8-bd49-494062a3afc4",
+            "Value": {
+                "id": "8de4d007-4ea1-4911-bfaa-1b3dcc87babe",
+                "resourcePath": "objects\\oSmoke\\oSmoke.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "e57b12a7-8377-449e-afb8-d58125588e87",
             "Value": {
                 "id": "73ad9214-0642-480c-87db-378f672941c2",
@@ -578,7 +610,8 @@
     "script_order": [
         "54c4485d-843a-4089-b34c-3299e61b9106",
         "b7401c20-39e1-4f58-aa6e-4d7392b6ccae",
-        "b54139eb-0f88-4d23-85d0-0acc3f52eeed"
+        "b54139eb-0f88-4d23-85d0-0acc3f52eeed",
+        "b498ee5a-e81e-4c95-a271-19f30f1a24bf"
     ],
     "tutorial": ""
 }

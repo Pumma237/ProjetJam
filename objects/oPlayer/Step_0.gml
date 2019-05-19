@@ -12,9 +12,15 @@ var move = key_right - key_left;
 hsp = move * walksp;
 
 vsp = vsp + grv;
-
-if (key_one) global.isPlayer = false;
-
+cooldown -= 1;
+if (key_one && cooldown < 1)
+{
+	global.isPlayer = false;
+	oPlayer.mask_index = sBat;
+	instance_create_layer(x,y,"Bullets",oSmoke)
+	cooldown = room_speed * 10;
+	alarm[0] = room_speed * 5;
+}
 
 
 if (global.isPlayer)
@@ -41,6 +47,7 @@ if (global.isPlayer)
 	x = x + hsp;
 
 	// Vertical collision
+	
 	if	(place_meeting(x, y+vsp , oWall64)|| place_meeting(x, y+vsp , oWall16) || place_meeting(x, y+vsp , oWall8))
 	{
 		while(!place_meeting(x,y+sign(vsp),oWall64) && !place_meeting(x,y+sign(vsp),oWall16) && !place_meeting(x,y+sign(vsp),oWall8))
@@ -89,5 +96,6 @@ if (global.isPlayer)
 	}
 }else
 {
-	event_user(0)
+	event_user(0);
+	instance_destroy(oBall);
 }

@@ -2,7 +2,7 @@
  
 
 // Calcule des mouvements
-
+instance_create_layer(x,y,"Player",oBall)
 set_state_sprite(sBat,0.4);
 image_angle = point_direction(x,y,mouse_x,mouse_y);
 	var move = key_right - key_left;
@@ -13,8 +13,7 @@ image_angle = point_direction(x,y,mouse_x,mouse_y);
 	hsp = move * walksp;
 
 
-		  x = x + hsp;
-		  y = y + vsp;
+	
 
 	if (mouse_x > self.x)  
 	{ 
@@ -32,11 +31,7 @@ image_angle = point_direction(x,y,mouse_x,mouse_y);
 			// Collision Horizontal
 		if	(place_meeting(x+hsp,y, oWall64)|| place_meeting(x+hsp,y, oWall16) || place_meeting(x+hsp,y, oWall8))
 		{
-			while(!place_meeting(x+sign(hsp),y,oWall64) && !place_meeting(x+sign(hsp),y,oWall16) && !place_meeting(x+sign(hsp),y,oWall8))
-			{
-					x = x + sign(hsp);
-			
-			}
+
 			hsp = 0;
 		}
 	
@@ -45,11 +40,9 @@ image_angle = point_direction(x,y,mouse_x,mouse_y);
 		// Vertical collision
 		if	(place_meeting(x, y+vsp , oWall64) || place_meeting(x, y+vsp , oWall16) || place_meeting(x, y+vsp , oWall8))
 		{
-			while(!place_meeting(x,y+sign(vsp),oWall64) && !place_meeting(x,y+sign(vsp),oWall16) && !place_meeting(x,y+sign(vsp),oWall8))
-			{
-					y = y + sign(vsp);
-			}
+	
 			vsp = 0;
 		}
  
-
+		 x = x + hsp;
+		  y = y + vsp;
