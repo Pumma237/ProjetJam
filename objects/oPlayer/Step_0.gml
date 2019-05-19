@@ -14,16 +14,16 @@ hsp = move * walksp;
 vsp = vsp + grv;
 
 // Saut
-if (place_meeting(x,y+1,oWall)) && (key_jump)
+if (place_meeting(x,y+1,oWall64) || place_meeting(x,y+1,oWall16) || place_meeting(x,y+1,oWall8)) && (key_jump)
 {
 	vsp = -12;	
 }
 
 
 // Collision Horizontal
-if	(place_meeting(x+hsp,y, oWall))
+if	(place_meeting(x+hsp,y, oWall64) || place_meeting(x+hsp,y, oWall16) || place_meeting(x+hsp,y, oWall8))
 {
-	while(!place_meeting(x+sign(hsp),y,oWall))
+	while(!place_meeting(x+sign(hsp),y,oWall64) || !place_meeting(x+sign(hsp),y,oWall16) || !place_meeting(x+sign(hsp),y,oWall8))
 	{
 			x = x + sign(hsp);
 			
@@ -34,9 +34,9 @@ if	(place_meeting(x+hsp,y, oWall))
 x = x + hsp;
 
 // Vertical collision
-if	(place_meeting(x, y+vsp , oWall))
+if	(place_meeting(x, y+vsp , oWall64)|| place_meeting(x, y+vsp , oWall16) || place_meeting(x, y+vsp , oWall8))
 {
-	while(!place_meeting(x,y+sign(vsp),oWall))
+	while(!place_meeting(x,y+sign(vsp),oWall64) || !place_meeting(x,y+sign(vsp),oWall16) || !place_meeting(x,y+sign(vsp),oWall8))
 	{
 			y = y + sign(vsp);
 	}
@@ -48,7 +48,7 @@ y = y + vsp;
 
 
 //Animation
-if (!place_meeting(x,y+1,oWall))
+if (!place_meeting(x,y+1,oWall64) || !place_meeting(x,y+1,oWall8) || !place_meeting(x,y+1,oWall16))
 {
 	sprite_index = sPlayerA;
 	//if (sign(vsp) > 0) image_index = 1 ; else image_index = 0;

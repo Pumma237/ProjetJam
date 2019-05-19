@@ -25,9 +25,9 @@ state = e_state.chase;
 	}
 	
 			// Collision Horizontal
-		if	(place_meeting(x+hsp,y, oWall))
+		if	(place_meeting(x+hsp,y, oWall64)|| place_meeting(x+hsp,y, oWall16) || place_meeting(x+hsp,y, oWall8))
 		{
-			while(!place_meeting(x+sign(hsp),y,oWall))
+			while(!place_meeting(x+sign(hsp),y,oWall64) || !place_meeting(x+sign(hsp),y,oWall16) || !place_meeting(x+sign(hsp),y,oWall8))
 			{
 					x = x + sign(hsp);
 			
@@ -38,9 +38,9 @@ state = e_state.chase;
 		
 
 		// Vertical collision
-		if	(place_meeting(x, y+vsp , oWall))
+		if	(place_meeting(x, y+vsp , oWall64) || place_meeting(x, y+vsp , oWall16) || place_meeting(x, y+vsp , oWall8))
 		{
-			while(!place_meeting(x,y+sign(vsp),oWall))
+			while(!place_meeting(x,y+sign(vsp),oWall64) || !place_meeting(x,y+sign(vsp),oWall16) || !place_meeting(x,y+sign(vsp),oWall8))
 			{
 					y = y + sign(vsp);
 			}
