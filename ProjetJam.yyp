@@ -192,6 +192,17 @@
         },
         {
             "Key": "718529b0-2800-4d71-8eef-84bad2aba5cb",
+<<<<<<< HEAD
+=======
+            "Value": {
+                "id": "b55d3e76-d465-4099-831b-2108a435632a",
+                "resourcePath": "tilesets\\t_Background\\t_Background.yy",
+                "resourceType": "GMTileSet"
+            }
+        },
+        {
+            "Key": "77d20310-190d-4aa4-8a1b-ff45c1694b65",
+>>>>>>> 1eb334600299d35f2bcf7177c5c31cc7c1d78b05
             "Value": {
                 "id": "b55d3e76-d465-4099-831b-2108a435632a",
                 "resourcePath": "tilesets\\t_Background\\t_Background.yy",
