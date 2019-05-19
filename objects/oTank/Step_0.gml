@@ -13,7 +13,7 @@ state = e_state.chase;
 	}
 	var direction_facing = image_xscale;
 	var distance_to_player = point_distance(x,y,oPlayer.x, oPlayer.y);
-	if (distance_to_player > 150 )
+	if (distance_to_player <= 850 )
 	{
 		
 		hsp = walksp * direction_facing;
@@ -49,3 +49,5 @@ state = e_state.chase;
 		  
 		y = y + vsp;
 		x = x + hsp;
+		
+		if (hsp == 0) image_index = 0 ;
