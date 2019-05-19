@@ -20,7 +20,7 @@ if (key_one && cooldown < 1)
 	global.isPlayer = false;
 	oPlayer.mask_index = slot1[0];
 	form = slot1[0];
-	walksp = slot1[4];
+	walksp = slot1[3];
 	instance_create_layer(x,y,"Bullets",oSmoke)
 	cooldown = room_speed * 10;
 	alarm[0] = room_speed * 5;
@@ -30,8 +30,8 @@ if (key_two && cooldown2 < 1)
 {
 	global.isPlayer = false;
 	oPlayer.mask_index = slot2[0];
-	form = slot1[0];
-	walksp = slot1[4];
+	form = slot2[0];
+	walksp = slot2[3];
 	instance_create_layer(x,y,"Bullets",oSmoke)
 	cooldown2 = room_speed * 10;
 	alarm[0] = room_speed * 5;
@@ -111,6 +111,7 @@ if (global.isPlayer)
 	}
 }else
 {
+	camera_set_view_size(global.cam,1920,1080);
 	event_user(0);
 	instance_destroy(oBall);
 }

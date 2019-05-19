@@ -52,6 +52,7 @@ image_angle = point_direction(x,y,mouse_x,mouse_y);
 		  break;
 	case sTank:
 	set_state_sprite(sTank,0.4);
+	camera_set_view_size(global.cam,2515,1886);
 	// Collision Horizontal
 	if	(place_meeting(x+hsp,y, oWall64) || place_meeting(x+hsp,y, oWall16) || place_meeting(x+hsp,y, oWall8))
 	{
