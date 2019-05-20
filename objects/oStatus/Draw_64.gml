@@ -8,6 +8,6 @@ pos_y = window_get_y() + pos_y * scale_y;
 
 // Draw the GUI
 draw_sprite_ext(sHearthFiller,0,pos_x,pos_y,global.playerHealth/global.playerMaxHealth,1,0,c_white,1);
-draw_sprite(sHearthBorder,0,280,730);
+draw_sprite(sHearthFiller,0,pos_x,pos_y);
 //draw_text(50,150,global.playerHealth);
 

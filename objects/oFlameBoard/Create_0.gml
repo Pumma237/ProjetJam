@@ -1,0 +1,11 @@
+hsp = 0;
+vsp = 0;
+grv = 0.3;
+walksp = 8;
+state = e_state.chase;
+direction_facing = 0;
+hspeed_push = 0;
+firingdelay = 0;
+attack_range = 250;
+chase_range = 1000;
+distance_to_player = 0;
