@@ -1,6 +1,6 @@
-if (place_meeting(x+hsp,y,oWall64) || place_meeting(x+hsp,y,oWall16) || place_meeting(x+hsp,y,oWall8))
+if (place_meeting(x+hsp,y,oWall64))
 {
-	while (!place_meeting(x+sign(hsp),y,oWall64) || !place_meeting(x+sign(hsp),y,oWall8) || !place_meeting(x+sign(hsp),y,oWall16))
+	while (!place_meeting(x+sign(hsp),y,oWall64))
 	{
 		x += sign(hsp);
 	}
@@ -9,9 +9,9 @@ if (place_meeting(x+hsp,y,oWall64) || place_meeting(x+hsp,y,oWall16) || place_me
 
 x += hsp;
 
-if (place_meeting(x,y+vsp,oWall64) || place_meeting(x,y+vsp,oWall16) || place_meeting(x,y+vsp,oWall8))
+if (place_meeting(x,y+vsp,oWall64))
 {
-	while (!place_meeting(x,y+sign(vsp),oWall64) || !place_meeting(x,y+sign(vsp),oWall16) || !place_meeting(x,y+sign(vsp),oWall8))
+	while (!place_meeting(x,y+sign(vsp),oWall64))
 	{
 		y += sign(vsp);
 	}

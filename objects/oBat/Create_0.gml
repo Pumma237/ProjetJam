@@ -5,7 +5,7 @@ hsp = 0;
 vsp = 0;
 walksp = 4;
 
-distance_to_player = 0;
+
 attack_range = 250;
 chase_range = 400;
 hspeed_push = 0;
