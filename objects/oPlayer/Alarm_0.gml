@@ -1,9 +1,6 @@
 /// @description Redevnir normal
 
 
-
-
-
 	
 	instance_create_layer(x,y,"Bullets",oSmoke);
 	global.isPlayer = true;

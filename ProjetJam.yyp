@@ -247,6 +247,14 @@
             }
         },
         {
+            "Key": "5b1a23f4-d8fa-45a8-95cf-fe023b91755c",
+            "Value": {
+                "id": "206af87b-bf9c-40e1-8a7e-4392c11c2939",
+                "resourcePath": "rooms\\LevelTuto\\LevelTuto.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "5d759709-14d2-4a9a-92ff-a4430121e7a8",
             "Value": {
                 "id": "971ac669-0d4a-4822-bd64-4663c92999db",

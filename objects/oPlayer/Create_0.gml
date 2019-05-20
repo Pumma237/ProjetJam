@@ -5,6 +5,8 @@ vsp = 0;
 grv = 0.3;
 walksp = 7;
 
+firingdelay = 0;
+
 cooldown = 0;
 cooldown2 = 0;
 
